@@ -1,0 +1,224 @@
+{% extends "bases.html" %}
+
+{% block content%} 
+
+<!-- ABOUT -->
+
+<div class="page-main-container">
+
+<section class="about-gallery-text">
+	<div class="container-main">
+		<div style="padding-left: 100px;"><br>
+			<h1>Bienvenue dans la ferme des 3 chênes</h1><br>
+
+		<div class="row">
+			<div class="row-left">
+				<div class="about-img-gallery">
+					<div class="row">
+						<div class="row-left-2">
+							<a>
+								<img class="container" width="400px" height="400px" src="{{url_for('static', filename='troischenes3.jpg')}}" alt="Pharmacie Drogenbos Intérieur">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div style="padding: auto;">
+			<div class="row-right">
+				<div class="about-text">
+					<div class="history-about">
+						<h3>Les différents graphes</h3>
+						<li>Graphique numéro 1: Afficher la distribution des races dans la base de données. On demande en entrée plusieurs races ainsi que le pourcentage minimum de ces dernières et on affiche sur le graphe le nombre d’animaux respectant ces critères par race.</i><br>
+						<br><li>Graphique numéro 2: Afficher pour une année ou un mois, les animaux nés en période de pleine lune et ceux en nés en dehors. Donner l’option à l’utilisateur d’affiner sa recherche en ajouter un champ famille qui est optionnel.</li>
+						<br><li>Graphique numéro 3: Afficher le nombre de vêlages par jour sur une période. Donner l’option à l’utilisateur d’affiner sa recherche en ajouter un champ famille qui est optionnel.</li>
+						</div>
+
+				</div>
+			</div>
+			</div>
+		</div>
+		</div>
+	</div>
+</section>
+</div>
+<!-- GRAPH -->
+
+<!--SPACE BETWEEN TOP NAV AND GRAPH-->
+  <br><br>  
+
+<!--Graph 1 -->
+<div class="graph">
+	<div style="background-color: grey;">
+		<div class="race">
+			<br><div style="text-align: center; border: 1px solid black; padding: 5px;">
+		
+			<br><h3>La distribution des races:</h3><br>
+				<label class="race">Holstein &nbsp<input type="checkbox" id="holstein"><span class="marker"></span></label>&nbsp &nbsp &nbsp
+				<label class="race">Jersey &nbsp<input type="checkbox" id="Jersey"><span class="marker"></span></label> &nbsp &nbsp &nbsp
+				<label class="race">Blanc Bleu Belge &nbsp<input type="checkbox" id="holstein"><span class="marker"></span></label> &nbsp &nbsp &nbsp
+			</div>
+		</div>
+		<br><br>
+		<canvas id="myChart" width="400px" height="100px"></canvas>
+			<script>
+			const ctx = document.getElementById('myChart').getContext('2d');
+			const myChart = new Chart(ctx, {
+				type: 'radar',
+				data: {
+					labels: ['Holstein', 'Jersey', 'Bleu Blanc Belge',],
+					datasets: [{
+						label: 'Distribution des races',
+						data: [20, 40, 60, 80, 100, 120, 140,],
+						backgroundColor: [
+							'rgba(255, 99, 132, 0.2)',
+							'rgba(54, 162, 235, 0.2)',
+							'rgba(255, 206, 86, 0.2)'
+						],
+						borderColor: [
+							'rgb(255, 255, 255)',
+						],
+						Color: [
+							'rgb(255,255,255)',
+						],
+
+						borderWidth: 1
+					}]
+				},
+				options: {
+					scales: {
+						y: {
+							beginAtZero: true
+						}
+					}
+				}
+			});
+			</script>
+		</div>
+	</div> 
+
+	<br><br>
+
+<!--Graph 2-->
+<div class="graph">
+	<div style="background-color: grey;">
+		<div class="date">
+			<br><div style="text-align: center; border: 1px groove black; padding: 5px;">
+				<br><h3>Les animaux nés en période de pleine lune et ceux en nés en dehors</h3><br>
+				<label for="start"><b>Début :</b></label>
+				<input type="date" id="start" name= "trip-start" value="2018-07-22" min="1990-10-03" max="2020-12-19"><br><br>
+
+				<label for="start"><b>Fin :</b></label>
+				<input type="date" id="stop" name= "trip-stop" value="2018-07-22" min="1990-10-03" max="2020-12-19"><br><br>
+			</div>
+		</div>
+		<canvas id="myChart2" width="400px" height="100px"></canvas>
+			<script>
+			const ctx2 = document.getElementById('myChart2').getContext('2d');
+			const myChart2 = new Chart(ctx2, {
+				type: 'bar',
+				data: {
+					labels: ['Janvier', 'Fevrier', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'aout', 'septembre', 'octobre', 'novembre', 'decembre'],
+					datasets: [{
+						label: 'Distribution des races',
+						data: [20, 40, 60, 80, 100, 120, 140, 160, 180, 200, 220, 240],
+						backgroundColor: [
+							'rgba(255, 99, 132, 0.2)',
+							'rgba(54, 162, 235, 0.2)',
+							'rgba(255, 206, 86, 0.2)',
+							'rgba(255, 99, 132, 0.2)',
+							'rgba(54, 162, 235, 0.2)',
+							'rgba(255, 206, 86, 0.2)',
+							'rgba(255, 206, 86, 0.2)',
+							'rgba(255, 99, 132, 0.2)',
+							'rgba(54, 162, 235, 0.2)',
+							'rgba(255, 206, 86, 0.2)',
+						],
+						borderColor: [
+							'rgb(255, 255, 255)'
+						],
+						Color: [
+							'rgb(255,255,255)',
+						],
+
+						borderWidth: 1
+					}]
+				},
+				options: {
+					scales: {
+						y: {
+							beginAtZero: true
+						}
+					}
+				}
+			});
+			</script>
+		</div>
+	</div> 
+
+<br><br>
+
+<!--Graph 3-->
+<div class="graph">
+	<div style="background-color: grey;">
+		<div class="date">
+			<br><div style="text-align: center; border: 1px groove black; padding: 5px;">
+				<br><h3>Le nombre de vêlages par jour sur une période</h3><br>
+				<label for="start"><b>Début :</b></label>
+				<input type="date" id="start" name= "trip-start" value="2018-07-22" min="1990-10-03" max="2020-12-19"><br><br>
+
+				<label for="start"><b>Fin :</b></label>
+				<input type="date" id="stop" name= "trip-stop" value="2018-07-22" min="1990-10-03" max="2020-12-19"><br><br>
+			</div>
+		</div>
+		<canvas id="myChart3" width="400px" height="100px"></canvas>
+			<script>
+			const ctx3 = document.getElementById('myChart3').getContext('2d');
+			const myChart3 = new Chart(ctx3, {
+				type: 'polarArea',
+				data: {
+					labels: ['Janvier', 'Fevrier', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'aout', 'septembre', 'octobre', 'novembre', 'decembre'],
+					datasets: [{
+						label: 'Distribution des races',
+						data: [20, 40, 60, 80, 100, 120, 140, 160, 180, 200, 220, 240],
+						backgroundColor: [
+							'rgba(255, 99, 132, 0.2)',
+							'rgba(54, 162, 235, 0.2)',
+							'rgba(255, 206, 86, 0.2)',
+							'rgba(255, 99, 132, 0.2)',
+							'rgba(54, 162, 235, 0.2)',
+							'rgba(255, 206, 86, 0.2)',
+							'rgba(255, 206, 86, 0.2)',
+							'rgba(255, 99, 132, 0.2)',
+							'rgba(54, 162, 235, 0.2)',
+							'rgba(255, 206, 86, 0.2)',
+						],
+						borderColor: [
+							'rgb(255, 255, 255)'
+						],
+						Color: [
+							'rgb(255,255,255)',
+						],
+
+						borderWidth: 1
+					}]
+				},
+				options: {
+					scales: {
+						y: {
+							beginAtZero: true
+						}
+					}
+				}
+			});
+			</script>
+		</div>
+	</div> 
+
+<br><br>
+
+<!--SPACE BETWEEN TOP NAV AND GRAPH-->
+<br><br>  
+{% endblock%}    
+
+	
+
