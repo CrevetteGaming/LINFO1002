@@ -1,3 +1,65 @@
 {% extends "bases.html" %}
+{% block content %}
 
+<body>
+    <div style="color: grey; box-sizing: inherit;">
+    <section id="about-us">
+        <div class="container-main">
+            <div class="row">
+                <div class="row-precis">
+                    <h2 class="section-title with-line">Bienvenue à notre ferme</h2>
+                    <p class="about-description">
+                        La ferme des trois chênes est une exploitation laitière et agricole crée en 1990 par Mr. et Mme. Verhaeghe et
+                        <br>supervisé par eux-meme. Etablis sur 30 hectares de prairies, nous trayons une centaine de vaches, qui nous
+                        <br>produisent dans les environs de 900 000 litres de lait par an. La Totalité du lait est transformé en différents
+                        <br>produits, fait sur place, tel que: du fromages, des youghurts nature ou encore notre dernière nouveautés des
+                        <br>cremes et masques pour le bien-etre de notre peau.
+                    </p>
+
+                </div>
+
+                <div class="row-image">
+                    <figure>
+                    <img class="float-right-1" width="350px" height="350px" src="{{url_for('static', filename='troischenes3.jpg')}}">
+                    </figure>
+                </div>
+
+            <div class="row-precis">
+                <h2 class="section-title with-line"> Nos vaches</h2>
+                <p class="about-description">
+                    Dans notre ferme nous comptons plus d'une centaine de vaches de différents espèces provenant du monde entier.
+                    <br>Le troupeau compte des vaches de deux origines possibles: soit la vache est née dans notre ferme d'une femelle
+                    <br>déja presente dans l'elevage ou soit c'est une vache provenant d'une autre ferme. Dans le cas des femelles; il
+                    <br>s'agit plutot de pailette d'insémination.
+                    <br>
+                    <br>Nous comptons 7 familles au sein de la ferme. Pour votre information personnelle la famille est définie par la mère 
+                    <br>ce qui differe de nous etre humain, lorsqu'un veau nait, il appartiendra à la même famille que sa mère. Tandis que 
+                    <br>dans le cas de vaches achetées provenant une autre exploitation, chaque nouvelle vache arrivée dans notre ferme
+                    <br>devient la matriarche d'une nouvelle famille. La famille sera constituée de la vache achetée, et de tous ses futurs 
+                    <br>veaux.
+                    <br>
+                    <br>Nous avons 3 différentes races de vaches qui sont : <br><br>- Holstein<br>- Jersey<br>- Blanc Bleu Belge<br>
+                    <br>
+                    <br>Les mélanges de sang au sein de notre ferme:
+                    <br>Lorsqu'une vache de la race X et un taureau de la race Y donnent naissance à un veau, on considère que le veau est 
+                    <br>à 50% de race X et à 50% de race Y. Les bêtes achetées, taureaux ou matriarches, seront considérées comme étant 
+                    <br>des animaux de pure race.
+                    <br>
+                </p>
+            </div>
+            <div class="row-image">
+                <figure>
+                <img class="float-right-2" width="350px" height="350px" src="{{url_for('static', filename='troischenes1.jpg')}}">
+                <img class="float-right-3" width="350px" height="350px" src="{{url_for('static', filename='troischenes2.jpg')}}">
+                </figure>
+                
+            </div>    
+            </div>
+        </div>
+    </section>
+    </div>    
+    <br><br><br><br>
+</body>
+
+{% endblock%}
 

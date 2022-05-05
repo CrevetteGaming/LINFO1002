@@ -4,7 +4,6 @@ import sqlite3
 
 from flask import Flask, redirect , url_for, render_template
 
-from db.data import data
 
 app = Flask(__name__)
 

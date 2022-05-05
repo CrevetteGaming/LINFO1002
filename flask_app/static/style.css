@@ -249,8 +249,14 @@ section{
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+
+}
+
+.row-precis {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+
 }
 
 .row-left {
@@ -297,6 +303,12 @@ section{
   padding-left: 15px;
   flex: 0 0 50%;
   max-width: 50%;
+}
+
+.row-image {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
 }
 
 .about-text {
@@ -350,4 +362,84 @@ position: absolute;
 top: 50%;
 left: 50%;
 margin: -35px 0 0 -35px;
+}
+
+.section-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+#about-us {
+  padding-top: 100px;
+}
+#about-us .section-title {
+  margin-bottom: 40px;
+  position: relative;
+}
+#about-us h6 {
+  margin-bottom: 30px;
+}
+#about-us .about-description {
+  margin-bottom: 32px;
+  font-size: 18px;
+}
+#about-us #about-counters {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  display: flex;
+}
+#about-us #about-counters .counter {
+  padding: 5px 15px;
+  border-right: 1px solid #ffe7cc;
+}
+#about-us #about-counters .counter:last-of-type {
+  border-right: none;
+}
+#about-us #about-counters .counter:first-of-type {
+  padding-left: 0px;
+}
+#about-us #about-counters .counter-nuber {
+  color: #fff;
+  font-size: 2.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+#about-us #about-counters .counter-title {
+  font-size: .75rem;
+  color: #6675a1;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+/*Images about.html */
+
+/*Image  troischenes1 */
+
+.float-right-1 {
+  float: right!important;
+  margin-top: -260px;
+  margin-right: 65px;
+  height: 288px;
+  width: 376px;
+}
+
+/* Image troischenes2 */
+
+.float-right-2 {
+  float: right!important;
+  margin-top: -560px;
+  margin-right: 65px;
+  height: 288px;
+  width: 376px;
+}
+
+/* Image troischenes3 */
+
+.float-right-3 {
+  float: right!important;
+  margin-top: -250px;
+  margin-right: 65px;
+  height: 288px;
+  width: 376px;
 }
