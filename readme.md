@@ -22,3 +22,18 @@ cd  LINFO1002
 ```
 pip3 install flask
 ```
+
+#### Lancement du site
+
+```
+cd flask_app
+cd flaskr
+```
+
+```
+flask run
+```
+
+#### Rendez vous sur votre navigateur
+
+Introduisez dans comme url: http://127.0.0.1:5000
