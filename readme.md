@@ -1,4 +1,4 @@
-# Projet 2 - La fermedes 3 chênes
+# Projet 2 - La ferme des 3 chênes
 
 Création d'un site internet pour une exploitation laitière et agricole
 
