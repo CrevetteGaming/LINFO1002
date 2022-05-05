@@ -36,4 +36,4 @@ flask run
 
 #### Rendez vous sur votre navigateur
 
-Introduisez dans comme url: http://127.0.0.1:5000
+Introduisez l'url suivant : http://127.0.0.1:5000
