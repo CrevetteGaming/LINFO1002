@@ -72,3 +72,52 @@ flask run
 #### Rendez vous sur votre navigateur
 
 Introduisez l'url suivant : http://127.0.0.1:5000
+
+
+## En cas d'erreur
+
+En cas d'erreur lors du lancement du site n'hésite pas à me contacter via mon adresse mail : dylan.mainghain@uclouvain.be ou bien nicolas.swinnen@uclouvain.be 
+
+Vous avez dans le répertoire racine du site un fichier explication-screen.pdf qui permet de visualiser le site à l'aide de screenshots et d'explications.
+
+## Arborecense des fichiers
+```
+LINFO1002-P2
+├── README.md
+├── readme.txt
+├── src // Folder containing all the project
+│   ├── app.py // main file, the file to execute to run the site
+│   ├── config.py // Fichier containing global variables
+│   ├── db // Fichiers liés à la base de données
+│   │   ├── 1002-sql-data // Dossier contenant les fichiers d'insertions, les données
+│   │   ├── create_db.py // Fichier pour initialiser la base de données, générer les différentes races
+│   │   ├── create_db.sql // Script SQL qui crée la base de données
+│   │   ├── database.db // Base de données SQL
+│   │   ├── db.py // Interface de la base de données
+│   │   ├── generate_race.py // Fichier contenant la fonction pour générer la course et la fonction utils pour celle-ci
+│   │   ├── __init__.py
+│   ├── moon_phase.py // Fichier permettant de calculer la phase de lune pour une date
+│   ├── static // Tout les fichiers static du site
+│   │   ├── chartjs // Chart js lib
+│   │   │   ├── Chart.bundle.min.js
+│   │   │   ├── Chart.min.css
+│   │   │   └── Chart.min.js
+│   │   ├── style.css // Styles pour le site Web
+│   │   ├── images
+│   │   └── js
+│   │       ├── base.js
+│   │       └── index.js // Le JS pour la page d'accueil
+│       ├── 404.html
+│       ├── about.html
+│       ├── contact.html
+│       ├── bases.html
+│       └── index.html
+├── tests
+│   ├── test_db.py
+│   └── test_moon_.py
+```
+
+## Auteurs
+
+- Mainghain Dylan
+- Swinnen Nicolas
