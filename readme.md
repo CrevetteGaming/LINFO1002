@@ -85,9 +85,8 @@ Vous avez dans le répertoire racine du site un fichier explication-screen.pdf q
 LINFO1002-P2
 ├── README.md
 ├── readme.txt
-├── src // Folder containing all the project
-│   ├── app.py // main file, the file to execute to run the site
-│   ├── config.py // Fichier containing global variables
+├── src // Dossier contenant tout le projet
+│   ├── app.py // Fichier principal, le fichier à exécuter pour lancer les sites
 │   ├── db // Fichiers liés à la base de données
 │   │   ├── 1002-sql-data // Dossier contenant les fichiers d'insertions, les données
 │   │   ├── create_db.py // Fichier pour initialiser la base de données, générer les différentes races
