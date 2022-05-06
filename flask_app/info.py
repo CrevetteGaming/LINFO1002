@@ -16,14 +16,16 @@ class info:
         except Error as e:
             print(e)
         return self.conn
-
+    
     def deconnection(self):
         self.conn.close()
 
     def familles(self):
-        familles == []
+        familles = []
         with self.conn as cursor:
             for row in cursor.execute('SELECT id, nom FROM familles'):
                 print(row)
                 familles.append(row)
             return familles
+
+    
