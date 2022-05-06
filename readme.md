@@ -14,13 +14,12 @@ cd  LINFO1002
 cd flask_app
 ```
 
-#### Installation de flask et de l'environnement virtuel
+#### Installation de flask et lancement de l'environnement virtuel
 
-installation de l'environnement virtuel utile pour le lancement du site
+lancement de l'environnement virtuel utile pour le lancement du site
 
 ```
-py -3 -m venv venv
-.\venv\Scripts\activate
+.\env\Scripts\activate
 ```
 
 installation de Flask
