@@ -12,7 +12,6 @@ Création d'un site internet pour une exploitation laitière et agricole
 git clone https://github.com/CrevetteGaming/LINFO1002
 cd  LINFO1002
 cd flask_app
-cd flaskr
 ```
 
 #### Installation de flask et de l'environnement virtuel
