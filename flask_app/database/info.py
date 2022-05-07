@@ -2,7 +2,8 @@
 # info https://docs.python.org/3/library/sqlite3.html
 
 import sqlite3
-from sqlite3 import Error
+import os
+import pathlib
 
 class info:
 
@@ -10,12 +11,8 @@ class info:
         self.data_name = db
 
     def connection(self):      #connection à la db
-        self.conn = None
-        try:
-            self.conn = sqlite3.connect(self.db)
-        except Error as e:
-            print(e)
-        return self.conn
+        self.conn = sqlite3.connect(self.data_name)
+
     
     def deconnection(self):
         self.conn.close()
@@ -28,4 +25,3 @@ class info:
                 familles.append(row)
             return familles
 
-    

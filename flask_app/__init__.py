@@ -2,14 +2,14 @@ import os
 import pathlib
 import sqlite3
 
-import info
+from database.info import info
 
 from flask import Flask, redirect , url_for, render_template
 
 
 app = Flask(__name__)
 
-base =  info.Info(os.path.join(pathlib.Path(__file__).parent.absolute(), "database/database.sqlite"))
+base =  info(os.path.join(pathlib.Path(__file__).parent.absolute(), "database/database.sqlite"))
 
 base.connection()
 
