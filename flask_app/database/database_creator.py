@@ -5,8 +5,8 @@ def main():
 
     files = ['insert_animaux_types.sql','insert_animaux_velages.sql', 'insert_animaux.sql', 'insert_complications.sql', 'insert_familles.sql', 'insert_types.sql', 'insert_velages_complications.sql', 'insert_velages.sql']
 
-    conn = sqlite3.connect('database.sql')      #connexion à database.sql
-    cursor = conn.cursor()
+    conn = sqlite3.connect('database.sql')      #accès à la base de données
+    cursor = conn.cursor()                      #le curseur p
 
     with open("inginious.sql",'r') as file:     #creation de la db
         content = file.read()

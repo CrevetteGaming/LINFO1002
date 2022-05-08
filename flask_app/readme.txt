@@ -7,7 +7,7 @@ Inscructions pour le lancement du site:
 3. Se rendre dans le répertoire Scripts et lancer le fichier activate.bat pour lancer l'environnement virtuel
    en utilisant la commande qui suit: cd C:\Users\nicol\Documents\flask_app\env\Scripts\activate.bat
 
-4. Entrer la commande suivante pour lancer le serveur: flask run 
+4. Entrer la commande suivante pour lancer le serveur: python __init__.py
 
 5. Allez dans un navigateur et aller sur le site: http://127.0.0.1:5000
 

@@ -7,6 +7,7 @@
 <!--SPACE BETWEEN TOP NAV AND GRAPH-->
   <br><br>  
 
+
 <!--Graph 1 -->
 <div class="graph">
 	<div style="background-color: grey;">
@@ -22,11 +23,6 @@
 		<br><br>
 		<canvas id="myChart" width="400px" height="100px"></canvas>
 			<script>
-
-			//recup les valeurs
-			const lst_fam = '{{data.lst_fam |tojson}}';
-
-			console.log(lst_fam);
 
 
 			const ctx = document.getElementById('myChart').getContext('2d');
@@ -129,20 +125,35 @@
 <div class="graph">
 	<div style="background-color: grey;">
 		<div class="date">
-			<br><div style="text-align: center; border: 1px groove black; padding: 5px;">
-				<br><h3>Le nombre de vêlages par jour sur une période</h3><br>
-				<label for="start"><b>Début :</b></label>
-				<input type="date" id="start" name= "trip-start" value="2018-07-22" min="1990-10-03" max="2020-12-19"><br><br>
+			<br><div style="border: 1px groove #4f4f4f; padding: 5px;">
+				<br><h3 style="text-align: center; color: #4f4f4f; font-size: 26px;">Le nombre de vêlages par jour sur une période</h3><br><br><br><br>
+				<div style="margin-left: 550px;">
+					<div class="button-graph">
+						<label for="start"><b>Début :</b></label>
+						<input style="  background: #4f4f4f; color: #fff;" type="date" id="start_graph3" name= "trip-start" value="2018-07-22" min="1990-10-03" max="2020-12-19">
+					</div>
+				</div>					
+					<br><br>
 
-				<label for="start"><b>Fin :</b></label>
-				<input type="date" id="stop" name= "trip-stop" value="2018-07-22" min="1990-10-03" max="2020-12-19"><br><br>
+				<div style="margin-left: 780px; margin-top: -71px;">
+					<div class="button-graph">
+						<label for="start"><b>Fin :</b></label>
+						<input style="  background: #4f4f4f; color: #fff;" type="date" id="stop_graph3" name= "trip-stop" value="2018-07-22" min="1990-10-03" max="2020-12-19">
+					</div>
+				</div>
+
+					<br><br>
+			
+				<div style="margin-left: 650px;  ">
+					<button class="button-graph" onclick="data_naissances()">Chargement du graphique</button><br><br><br><br>
+				</div>				
 			</div>
 		</div>
 		<canvas id="myChart3" width="400px" height="100px"></canvas>
 			<script>
 			const ctx3 = document.getElementById('myChart3').getContext('2d');
 			const myChart3 = new Chart(ctx3, {
-				type: 'polarArea',
+				type: 'bar',
 				data: {
 					labels: ['Janvier', 'Fevrier', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'aout', 'septembre', 'octobre', 'novembre', 'decembre'],
 					datasets: [{
@@ -184,6 +195,66 @@
 
 <br><br>
 
+<script>
+
+//recup les valeurs
+const lst_fam = '{{data.lst_fam |tojson}}';
+const date_naissances = '{{data.date_naissances |tojson}}';
+const naissances_jour = '{{data.naissances_jour}}';
+
+// suppresion des brolles de la console
+var liste_naissances = naissances_jour.replaceAll("&#39;",'').replaceAll("(",'').replaceAll(")",'').replaceAll(",",'').replaceAll("{",'').replaceAll("}",'').replaceAll(":",'').split(" ")
+var dict_naissances = {}
+for (let i = 0; i < liste_naissances.length; i = i+2){
+	dict_naissances[liste_naissances[i]] = liste_naissances[i+1];
+}
+
+function data_naissances() {
+	console.log(dict_naissances)
+	var start = document.getElementById("start_graph3").value;
+	var stop =document.getElementById("stop_graph3").value;
+	//console.log(start)
+	//console.log(stop)
+
+	//  liste à faire avec les dates de start et de fin
+	var getDaysArray = function(s,e) {for(var a=[],d=new Date(s);d<=new Date(e);d.setDate(d.getDate()+1)){ a.push(new Date(d));}return a;};
+	var date_liste = getDaysArray(new Date(start), new Date (stop));
+	//console.log(date_liste)
+
+	// comparer chaque date de la liste et regarder si elle appartient à la liste
+	var allday = [];
+	var nais = [];
+	for (let i = 0; i < date_liste.length;i++){
+
+		// transformation des dates en format dictionnaire
+		var month = date_liste[i].getUTCMonth() + 1; 
+		var day = date_liste[i].getUTCDate();
+		var year = date_liste[i].getUTCFullYear();
+		datuum = day + "/" + month + "/" + year;
+		
+		// Checking date in the dictionnaire
+		if (datuum in dict_naissances){
+			nais.push(dict_naissances[datuum])
+			allday.push(datuum)
+
+		}else{
+			nais.push(0)
+			allday.push(datuum)
+		}
+		
+	}
+	// mise à jour des valeurs du graphique (horizontale)
+	myChart3.data.labels = allday;
+	myChart3.data.datasets[0].data = nais;
+	myChart3.update();
+}
+
+
+//console.log(lst_fam);
+//console.log(date_naissances);
+// 	
+
+</script>
 <!--SPACE BETWEEN TOP NAV AND GRAPH-->
 <br><br>  
 {% endblock%}    

@@ -1,11 +1,11 @@
-
+/*Basic style for the whole site  */
 html,
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
 }
 
-/*Basic style for the whole site  */
+
 *{
   margin: 0;
   padding: 0;
@@ -15,6 +15,7 @@ h1{
   color: #D3D3D3;
 }
 
+/* Bases.html  */
 #header{
   width:100%;
   float:left;
@@ -26,13 +27,11 @@ h1{
   float:left;
   margin-bottom:25px;
   background-color: #1A1515;
-
 }
 
 .logo h1{ 
   text-align:center; 
   margin-bottom:5px;
-  
 }
 
 .logo h1 a{
@@ -49,7 +48,6 @@ h1{
   right: 50%;
   position: relative;
   background-color: #1A1515;
-
 }
 
 .inner-center {
@@ -57,7 +55,6 @@ h1{
   right: -50%;
   position: relative;
   background-color: #1A1515;
-
 }
 
 .logo img{
@@ -79,10 +76,10 @@ h1{
   padding-left: 15px;
   padding-right: 15px;
   background-color: #1A1515;
-
 }
 
-/* The navigation bar */
+
+/* Top Nav Bar */
 .navbar {
   margin-left:auto;
   text-align: center;
@@ -101,15 +98,14 @@ h1{
   text-decoration: none;
   font-size: 17px;
   background-color: #1A1515;
-
 }
   
 .navbar a:hover {
   background-color: #4f4f4f;
 }
 
-  .active {
-    background-color: #D3D3D3;
+.active {
+  background-color: #D3D3D3;
 }
 
 .navbar-around {
@@ -127,8 +123,7 @@ h1{
   }
 }
 
-/* About */
-
+/* About.html */
 .container-left {
   margin-top: 5px;
   width: 50%;
@@ -153,56 +148,45 @@ h1{
 }
 
 /* Graph */
-
 .box {
   width: auto;
   height: auto;
   display: flex;
   margin: auto;
-  
 }
 
 .box-graph-left {
-    width: 50%;
-    height: auto;
-    padding-left: 10px;
-    margin: 0;
-
+  width: 50%;
+  height: auto;
+  padding-left: 10px;
+  margin: 0;
 }
+
 .box-graph-right {
   width: 50%;
   height: auto;
   padding-left: 10px;
   padding-right: 10px;
   margin: 0;
-
 }
 
-/* Footer */
-#footer {
-  padding-bottom: 1px;
-}
-.footer1 { 
-  padding: 15px 0;
+.button-graph {
+  line-height: 18px;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 14px 24px;
+  margin-right: -500px;
+  margin-top: -400px;
+  display: inline-block;
+  outline: none;
+  font-size: 16px;
+  border: none;
+  background: #4f4f4f;
   color: #fff;
-  font-size: 12px;
-  background-color: #1A1515;
- 
-}
-
-.footer1 a {
-  color: #fff;
-  background-color: #1A1515;
-
 }
 
 
-.footer1 p {
-  margin: 0;
-  background-color: #1A1515;
-
-}
-
+/* about.html */
 .grey {
   font-weight: 700;
   background: #777777;
@@ -210,7 +194,6 @@ h1{
   font-size: 12px;
   color: #fff;
 }
-
 
 .widget-simplenav {
   margin-left:-5px;
@@ -220,7 +203,6 @@ h1{
 .widget-simplenav a{
   margin: 5px;
   background-color: #1A1515;
-
 }		
 
 
@@ -233,6 +215,7 @@ h1{
 .about-gallery-text {
   padding-bottom: 75px;
 }
+
 
 section{
  display: block;
@@ -249,14 +232,12 @@ section{
 .row {
   display: flex;
   flex-wrap: wrap;
-
 }
 
 .row-precis {
   position: relative;
   width: 100%;
   min-height: 1px;
-
 }
 
 .row-left {
@@ -373,38 +354,47 @@ margin: -35px 0 0 -35px;
 #about-us {
   padding-top: 100px;
 }
+
 #about-us .section-title {
   margin-bottom: 40px;
   position: relative;
 }
+
 #about-us h6 {
   margin-bottom: 30px;
 }
+
 #about-us .about-description {
   margin-bottom: 32px;
   font-size: 18px;
 }
+
 #about-us #about-counters {
   margin-top: 32px;
   margin-bottom: 32px;
   display: flex;
 }
+
 #about-us #about-counters .counter {
   padding: 5px 15px;
   border-right: 1px solid #ffe7cc;
 }
+
 #about-us #about-counters .counter:last-of-type {
   border-right: none;
 }
+
 #about-us #about-counters .counter:first-of-type {
   padding-left: 0px;
 }
+
 #about-us #about-counters .counter-nuber {
   color: #fff;
   font-size: 2.25rem;
   font-weight: 600;
   margin: 0;
 }
+
 #about-us #about-counters .counter-title {
   font-size: .75rem;
   color: #6675a1;
@@ -413,9 +403,7 @@ margin: -35px 0 0 -35px;
 }
 
 /*Images about.html */
-
 /*Image  troischenes1 */
-
 .float-right-1 {
   float: right!important;
   margin-top: -260px;
@@ -425,7 +413,6 @@ margin: -35px 0 0 -35px;
 }
 
 /* Image troischenes2 */
-
 .float-right-2 {
   float: right!important;
   margin-top: -560px;
@@ -435,7 +422,6 @@ margin: -35px 0 0 -35px;
 }
 
 /* Image troischenes3 */
-
 .float-right-3 {
   float: right!important;
   margin-top: -250px;
@@ -444,7 +430,7 @@ margin: -35px 0 0 -35px;
   width: 376px;
 }
 
-
+/* Contact.html */
 #form {
   position: relative;
   width: 500px;
@@ -462,7 +448,6 @@ margin: -35px 0 0 -35px;
   color: #726659;
   border: solid 1px #b3aca7;
   border-bottom: none;
-  
 }
 
 .textarea-form {
@@ -476,7 +461,6 @@ margin: -35px 0 0 -35px;
   font-family: 'Lato', sans-serif;
   font-size: 0.875em;
   border: solid 1px #b3aca7;
-
 }
 
 
@@ -489,4 +473,27 @@ margin: -35px 0 0 -35px;
   color: #b3aca7;
   border: solid 1px #b3aca7;
   border-top: none;
+}
+
+/* Footer */
+#footer {
+  padding-bottom: 1px;
+}
+
+.footer1 { 
+  padding: 15px 0;
+  color: #fff;
+  font-size: 12px;
+  background-color: #1A1515;
+}
+
+.footer1 a {
+  color: #fff;
+  background-color: #1A1515;
+}
+
+
+.footer1 p {
+  margin: 0;
+  background-color: #1A1515;
 }
