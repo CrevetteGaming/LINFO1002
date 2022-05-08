@@ -60,7 +60,6 @@ pip3 install flask
 
 ```
 cd flask_app
-cd flaskr
 ```
 
 ```
