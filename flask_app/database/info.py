@@ -1,4 +1,4 @@
-# Programme écrit par  Nicolas Swinnen , étudiant de l'EPL, faculté de l'Université Catholique de Louvain.
+# Code écrit par  Nicolas Swinnen , étudiant de l'EPL, faculté de l'Université Catholique de Louvain.
 # Lien • Github : https://github.com/CrevetteGaming/LINFO1002
 
 import sqlite3
@@ -55,29 +55,31 @@ class info:
         Genere une liste avec le pourcentage d'une type de race
         '''
         with self.conn as cursor:
-            return cursor.execute("SELECT type_id, pourcentage FROM animaux_types").fetchall()     
+            return cursor.execute("SELECT type_id, pourcentage FROM animaux_types").fetchall()   
+
+    
+    def recuperation_animaux(self):
+        '''  
+        Liste des ids d'animaux dans la base de données
+        '''
+        with self.conn as cursor:
+            cursor.execute("SELECT id FROM animaux")
+            recuperation_animaux = cursor.fetchall()
+            #for all in recuperation_animaux:
+                #print(all)
+            return recuperation_animaux  
 
 
 # ----- Races  ----- #
-
-def recuperation_animaux(self):
-    '''  
-    Liste des ids d'animaux dans la base de données
-    '''
-    with self.conn as cursor:
-        cursor.execute("SELECT id FROM animaux")
-        recuperation_animaux = cursor.fetchall()
-        #for all in recuperation_animaux:
-            #print(all)
-        return recuperation_animaux
-
 def recuperation_races(conn,d):
     '''
     Liste avec les races des vaches et le pourcentage d'heritage de l'animal
     '''
 
     with conn as cursor:
-        return cursor.execute("SELECT type_id, pourcentage FROM animaux_types WHERE animal_id = ?",(d,)).fetchall()
+        cursor.execute("SELECT type_id, pourcentage FROM animaux_types WHERE animal_id = ?",(d,))
+        recuperation_races = cursor.fetchall()
+        return recuperation_races
 
 
 def recuperation_parents(conn,d):
@@ -85,8 +87,9 @@ def recuperation_parents(conn,d):
     Liste avec la race des parents
     '''
     with conn as cursor:
-        return cursor.execute("SELECT pere_id, mere_id FROM animaux, animaux_velages, velages WHERE animaux.id = ? AND animaux.id = animaux_velages.animal_id AND animaux_velages.animal_id = velages.id",(d,)).fetchall()
-
+        cursor.execute("SELECT pere_id, mere_id FROM animaux, animaux_velages, velages WHERE animaux.id = ? AND animaux.id = animaux_velages.animal_id AND animaux_velages.animal_id = velages.id",(d,))
+        recuperation_parents = cursor.fetchall()
+        return recuperation_parents
 
 def races_calculs(races_parents):
     '''
@@ -109,7 +112,6 @@ def liaisons_races(conn, animal_id, race):
     for r in race:
         with conn as cursor:
             cursor.execute("INSERT INTO animaux_types VALUES (?, ?, ?)", (animal_id, r[0], r[1]))
-            print(f"ajouté : id:{animal_id},type: {r[0]}, pourcentage: {r}")
 
 def set_races(conn, animal_id):
     '''

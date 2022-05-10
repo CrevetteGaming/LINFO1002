@@ -7,8 +7,7 @@ Inscructions pour le lancement du site:
 
 2. Ouvrir un terminal
 
-3. Se rendre dans le répertoire Scripts et lancer le fichier activate.bat pour lancer l'environnement virtuel
-   en utilisant la commande qui suit: cd \flask_app\env\Scripts\activate.bat
+3. Lancez l'environnement virtuel en utilisant la commande qui suit: .\env\Scripts\activate
 
 4. Installez Flask à l'aide de la commande suivante: pip install Flask
 

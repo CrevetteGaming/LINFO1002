@@ -2,6 +2,7 @@
 # Lien • Github : https://github.com/CrevetteGaming/LINFO1002
 #
 #création de la base de données             info: https://python.doctor/page-database-data-base-donnees-query-sql-mysql-postgre-sqlite
+
 import sqlite3
 from info import generate_race
 import os
