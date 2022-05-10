@@ -1,0 +1,1 @@
+#Malheureusement je n'ai pas fait de test unitaire ceci dit j'ai des print et des console.log qui permettent de verifier si ma requete et/ou fonction marche
