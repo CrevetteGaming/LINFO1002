@@ -121,7 +121,6 @@ LINFO1002-P2
 
 ```
 
-## Auteurs
+## Auteur
 
-- Mainghain Dylan
 - Swinnen Nicolas
