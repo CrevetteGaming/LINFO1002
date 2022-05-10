@@ -39,10 +39,7 @@ data = {
     "date_naissances" : naissances,
     "naissances_jour" : naissances_jour,
     "race_pourc" : race_pourc
-
 }
-
-
 
 # home page
 @app.route('/')  # root : main page
@@ -59,7 +56,6 @@ def about():
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
-
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=5000, debug=True)
