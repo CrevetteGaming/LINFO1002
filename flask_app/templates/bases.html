@@ -1,7 +1,6 @@
 <!DOCTYPE html>
     <html lang="fr">
     <head>
-
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
         <script src="https://www.chartjs.org/samples/latest/utils.js"></script>
 
@@ -28,28 +27,23 @@
                 </div>
             <div style="clear: both;"></div>
             <div class="desc"></div>
-    </div> 
+    </div><br><br>
 	
-	<br><br>  
-
     </head>
         <body>
-            
-       <!-- Load an icon library -->
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
+       <!-- Nav-Bar -->
        <div class="navbar">
            <div class="navbar-around"></div>
-           <div style="display: flex; justify-content: center;">
-           <a href="{{url_for('home')}}"><i class="fa fa-fw fa-home"></i> Accueil</a>
-           <a href="{{url_for('about')}}"><i class="fa fa-users"></i> A propos</a>
-           <a href="{{url_for('contact')}}"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+            <div style="display: flex; justify-content: center;">
+            <a href="{{url_for('home')}}"><i class="fa fa-fw fa-home"></i> Accueil</a>
+            <a href="{{url_for('about')}}"><i class="fa fa-users"></i> A propos</a>
+            <a href="{{url_for('contact')}}"><i class="fa fa-fw fa-envelope"></i> Contact</a>
            </div>
          </div>
-         <div class="navbar-around"></div>
+           <div class="navbar-around"></div>
             
             {% block content%}{% endblock%}
+
             <!--Footer-->
             <footer id="footer">
                 <div class="grey"></div>
@@ -59,13 +53,12 @@
                             <div class="col-md-6 widget">
                                 <div class="widget-body">
                                     <p class="simplenav">
-                                        <a href="#Accueil">Accueil</a> | 
-                                        <a href="about.html">A Propos</a> |
-                                        <a href="contact.html">Contact</a> &nbsp;
+                                        <a href="{{url_for('home')}}">Accueil</a> | 
+                                        <a href="{{url_for('about')}}">A Propos</a> |
+                                        <a href="{{url_for('contact')}}">Contact</a> &nbsp;
                                     </p>
                                 </div>
                             </div>
-                            <div><a href="zebi./be"></a></div>
                             <br>
                             <div class="col-md-6 widget">
                                 <div class="widget-body">
