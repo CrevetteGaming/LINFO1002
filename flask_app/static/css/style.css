@@ -185,6 +185,20 @@ h1{
   color: #fff;
 }
 
+.button-graph-smaller {
+  line-height: 18px;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 9px 18px;
+  margin-right: -500px;
+  margin-top: -400px;
+  display: inline-block;
+  outline: none;
+  font-size: 16px;
+  border: none;
+  background: #4f4f4f;
+  color: #fff;
+}
 
 /* about.html */
 .grey {
@@ -410,24 +424,30 @@ margin: -35px 0 0 -35px;
   margin-right: 65px;
   height: 288px;
   width: 376px;
+  border: 5px solid #555;
+  border-radius: 6px;
 }
 
 /* Image troischenes2 */
 .float-right-2 {
   float: right!important;
-  margin-top: -560px;
+  margin-top: -810px;
   margin-right: 65px;
   height: 288px;
   width: 376px;
+  border: 5px solid #555;
+  border-radius: 6px;
 }
 
 /* Image troischenes3 */
 .float-right-3 {
   float: right!important;
-  margin-top: -250px;
+  margin-top: -400px;
   margin-right: 65px;
   height: 288px;
   width: 376px;
+  border: 5px solid #555;
+  border-radius: 6px;
 }
 
 /* Contact.html */

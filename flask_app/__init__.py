@@ -16,12 +16,16 @@ base.connection()
 
 lst_fam = base.familles()
 naissances = base.date_naissance()
+#animal_races_pourcentage = base.animal_races_pourcentage()
 
 #dictionnaire nombre de naissances/jour
 naissances_jour = {}
 for date in naissances:
     naissances_jour[date] = naissances_jour.get(date,0)+1
 #print (naissances_jour)
+
+#recup race pourcentage
+race_pourc = base.animal_races_pourcentage()
 
 #deconnection db
 base.deconnection()
@@ -30,8 +34,9 @@ base.deconnection()
 data = {
     "lst_fam" : lst_fam,
     "date_naissances" : naissances,
-    "naissances_jour" : naissances_jour
-    
+    "naissances_jour" : naissances_jour,
+    "race_pourc" : race_pourc
+
 }
 
 
