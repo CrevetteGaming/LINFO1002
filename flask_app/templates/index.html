@@ -2,7 +2,7 @@
 
 {% block content%} 
 
-<!-- GRAPH -->
+<!-- Index.html graph -->
 
 <!--SPACE BETWEEN TOP NAV AND GRAPH-->
   <br><br>  
@@ -13,7 +13,6 @@
 	<div style="background-color: grey;">
 		<div class="race">
 			<br><div style="text-align: center; border: 1px solid black; padding: 5px;">
-		
 			<br><h3 style="text-align: center; color: #4f4f4f; font-size: 26px;">La distribution des races:</h3><br><br>
 				<div style="margin-left: -950px;">
 					<label class="button-graph">Holstein &nbsp<input type="checkbox" id="holstein"></label>&nbsp &nbsp &nbsp
@@ -33,13 +32,11 @@
 				<br>
 				<div style="margin-left: -450px; margin-top: 10px;">
 					<button class="button-graph" onclick="race()">Chargement du graphique</button><br><br><br><br>
-				</div>	
-					
+				</div>			
 			</div>
-		</div>
-		<br><br>
-		<canvas style="padding-bottom: 15px;" id="myChart" width="400px" height="100px"><br><br></canvas>
+		</div>	<br><br>
 
+		<canvas style="padding-bottom: 15px;" id="myChart" width="400px" height="100px"><br><br></canvas>
 			<script>
 			const ctx = document.getElementById('myChart').getContext('2d');
 			const myChart = new Chart(ctx, {
@@ -82,10 +79,10 @@
 					c = b[i]+ " "  + b[i+1]
 					animal_races_pourcentage.push(c);
 			}
-			</script>
 
-			<script>
-			//ca fonctionne que une fois jsp pq
+			// ---- GRAPHIQUE 1 ---- \\
+
+			// /!\ recharger la page apres chaque nouvelles entrées de paramètres sinon marche pas
 			function race(){
 
 				// valeur des paramètres devant le graph
@@ -94,11 +91,10 @@
 				var jersey= document.getElementById("Jersey").checked;  //3
 				var pourcentage_races = document.getElementById("pourcentage_races").value;
 
-				console.log(holstein)
-				console.log(bbb)
-				console.log(jersey)
-				console.log(pourcentage_races)
-
+				//console.log(holstein)
+				//console.log(bbb)
+				//console.log(jersey)
+				//console.log(pourcentage_races)
 
 				race_ferme = [0,0,0]
 
@@ -134,12 +130,8 @@
 
 			}
 			</script>
-
 		</div>
-	</div> 
-
-	<br><br><br><br>
-
+	</div> <br><br><br><br>
 
 <!--Graph 2-->
 <div class="graph">
@@ -147,7 +139,7 @@
 		<div class="date">
 			<br><div style="border: 1px groove #4f4f4f; padding: 5px;">
 				<br><h3 style="text-align: center; color: #4f4f4f; font-size: 26px;">Les animaux nés en période de pleine lune et ceux en nés en dehors</h3><br><br><br><br>
-				<div style="margin-left: 450px;">
+				<div style="margin-left: 550px;">
 					<div class="button-graph">
 						<label for="start"><b>Début :</b></label>
 						<input style="  background: #4f4f4f; color: #fff;" type="date" id="start_graph2" name= "trip-start" value="2018-07-22" min="1990-10-03" max="2020-12-19">
@@ -155,192 +147,17 @@
 				</div>					
 					<br><br>
 
-				<div style="margin-left: 680px; margin-top: -71px;">
+				<div style="margin-left: 780px; margin-top: -71px;">
 					<div class="button-graph">
 						<label for="start"><b>Fin :</b></label>
 						<input style="  background: #4f4f4f; color: #fff;" type="date" id="stop_graph2" name= "trip-stop" value="2018-07-22" min="1990-10-03" max="2020-12-19">
 					</div>
 				</div>
-				
-				<div style="margin-left: 900px; margin-top: -34px;">
-					<div class="button-graph-smaller">
-						<label for="familles">Familles: </label>
-						<input list="familles" style="background-color: #4f4f4f; padding: 5px;" id="famille" name="famille ">
-						<datalist id="familles">   
-							<option value="0" selected>--None--</option>
-							<option value="134">Margueritte</option>
-							<option value="45">Jonquille</option>
-							<option value="157">Lila</option>
-							<option value="99">Paquerette</option>
-							<option value="65">Agapanthe</option>
-							<option value="149">Bleuet</option>
-							<option value="61">Ciboulette</option>
-							<option value="141">Iris</option>
-							<option value="161">Lavande</option>
-							<option value="117">Lotus</option>
-							<option value="164">Hélène</option>
-							<option value="123">Milka</option>
-							<option value="16">Cote d’Or</option>
-							<option value="77">Lindt</option>
-							<option value="139">Toblerone</option>
-							<option value="1">Galak</option>
-							<option value="92">KitKat</option>
-							<option value="116">Kinder</option>
-							<option value="30">Narcisse</option>
-							<option value="120">Orchidée</option>
-							<option value="47">Pissenlit</option>
-							<option value="96">Tournesol</option>
-							<option value="4">Vincent</option>
-							<option value="79">Trompette</option>
-							<option value="29">Minnie</option>
-							<option value="140">Rosette</option>
-							<option value="85">Blondie</option>
-							<option value="104">Caprice</option>
-							<option value="82">Betty</option>
-							<option value="97">Noisette</option>
-							<option value="10">Margot</option>
-							<option value="2">Réglisse</option>
-							<option value="15">Ruby</option>
-							<option value="126">Rustique</option>
-							<option value="144">Raymonde</option>
-							<option value="152">Sky</option>
-							<option value="110">Snow</option>
-							<option value="146">Sauterelle</option>
-							<option value="111">Star</option>
-							<option value="147">Sidonie</option>
-							<option value="50">Saturne</option>
-							<option value="17">Sorbet</option>
-							<option value="115">Sonette</option>
-							<option value="94">Summer</option>
-							<option value="63">Plume</option>
-							<option value="35">Peluche</option>
-							<option value="84">Pamela</option>
-							<option value="5">Panade</option>
-							<option value="69">Perle</option>
-							<option value="136">Papaye</option>
-							<option value="26">Renaud</option>
-							<option value="39">Papyrus</option>
-							<option value="22">Potache</option>
-							<option value="74">Pomme</option>
-							<option value="25">Pascaline</option>
-							<option value="48">Pink</option>
-							<option value="67">Provence</option>
-							<option value="148">Prune</option>
-							<option value="33">Paula</option>
-							<option value="18">Paupiette</option>
-							<option value="83">Pupuce</option>
-							<option value="21">Oasis</option>
-							<option value="80">Ocarina</option>
-							<option value="12">Orange</option>
-							<option value="91">Orage</option>
-							<option value="32">Origami</option>
-							<option value="20">Odile</option>
-							<option value="108">Ollande</option>
-							<option value="13">Olympe</option>
-							<option value="81">Oméga</option>
-							<option value="145">Otaria</option>
-							<option value="121">Okaly</option>
-							<option value="38">Onyx</option>
-							<option value="73">Olive</option>
-							<option value="106">Origan</option>
-							<option value="54">Ovalie</option>
-							<option value="75">Ophélie</option>
-							<option value="98">Ophia</option>
-							<option value="102">Ninette</option>
-							<option value="28">Ayham</option>
-							<option value="88">Ninon</option>
-							<option value="162">Naya</option>
-							<option value="138">Naza</option>
-							<option value="118">Nadine</option>
-							<option value="66">Nitendo</option>
-							<option value="154">Neda</option>
-							<option value="150">Noire</option>
-							<option value="129">Blanche</option>
-							<option value="142">Nairobi</option>
-							<option value="90">Nolvenn</option>
-							<option value="124">Nela</option>
-							<option value="70">Nora</option>
-							<option value="127">Fraise</option>
-							<option value="100">Banane</option>
-							<option value="72">Poire</option>
-							<option value="46">Citron</option>
-							<option value="119">Benoît</option>
-							<option value="128">Normande</option>
-							<option value="76">Norma</option>
-							<option value="135">Neptune</option>
-							<option value="27">Neslie</option>
-							<option value="40">Nancy</option>
-							<option value="8">Nostalgie</option>
-							<option value="156">Nouille</option>
-							<option value="109">Naomi</option>
-							<option value="11">Nourrice</option>
-							<option value="19">Nounou</option>
-							<option value="95">Nice</option>
-							<option value="9">Nubia</option>
-							<option value="23">Nash</option>
-							<option value="112">Numerobis</option>
-							<option value="114">Nuggets</option>
-							<option value="42">Nassma</option>
-							<option value="87">Nya</option>
-							<option value="163">Nilla</option>
-							<option value="159">Nathalia</option>
-							<option value="158">Nina</option>
-							<option value="36">Nima</option>
-							<option value="6">Rubarbe</option>
-							<option value="31">Maserati</option>
-							<option value="78">Mercedes</option>
-							<option value="43">Ferraris</option>
-							<option value="14">Ford</option>
-							<option value="86">Citroenne</option>
-							<option value="155">Jeep</option>
-							<option value="151">Magma</option>
-							<option value="137">Maite</option>
-							<option value="51">Madi</option>
-							<option value="62">Motorola</option>
-							<option value="24">Mirabelle</option>
-							<option value="59">Mazda</option>
-							<option value="153">Fiesta</option>
-							<option value="122">Malaisie</option>
-							<option value="34">Mamamia</option>
-							<option value="49">Météorite</option>
-							<option value="130">Moutarde</option>
-							<option value="113">Mosaic</option>
-							<option value="132">Moselle</option>
-							<option value="133">Mandala</option>
-							<option value="53">Meringue</option>
-							<option value="58">Micheline</option>
-							<option value="101">Midas</option>
-							<option value="107">Mimosa</option>
-							<option value="3">Myrtille</option>
-							<option value="103">Mystic</option>
-							<option value="41">Mushroom</option>
-							<option value="93">Moussaka</option>
-							<option value="52">Moon</option>
-							<option value="60">Mastar</option>
-							<option value="68">Céline</option>
-							<option value="143">Mina</option>
-							<option value="131">Macaroni</option>
-							<option value="44">Madona</option>
-							<option value="56">Majestic</option>
-							<option value="57">Bessie</option>
-							<option value="37">Clarabelle</option>
-							<option value="125">Penny</option>
-							<option value="105">Dottie</option>
-							<option value="160">Tonnerre</option>
-							<option value="55">Oreo</option>
-							<option value="64">Panda</option>
-							<option value="7">Bimbo</option>
-							<option value="71">Moka</option>
-							<option value="89">Mélasse</option>
-							<option value="500">Unknown</option>
-						</datalist>
-					</div> &nbsp &nbsp &nbsp 
-				</div>
 
 					<br><br>
 			
-				<div style="margin-left: 650px; ">
-					<button class="button-graph" onclick="">Chargement du graphique</button><br><br><br><br>
+				<div style="margin-left: 630px; ">
+					<button class="button-graph" onclick="moon()">Chargement du graphique</button><br><br><br><br>
 				</div>				
 			</div>
 		</div>
@@ -348,37 +165,108 @@
 
 		<canvas style="padding-bottom: 15px;" id="myChart2" width="400px" height="100px"></canvas>
 			<script>
-			const ctx2 = document.getElementById('myChart2').getContext('2d');
-			const myChart2 = new Chart(ctx2, {
-				type: 'bar',
-				data: {
-					labels: ['Pleine Lune','Normale'],
-					datasets: [{
-						label: 'Naissance en période de pleine lune',
-						data: [9, 30],
-						backgroundColor: [
-							'rgba(255, 99, 132, 0.2)',
-							'rgba(54, 162, 235, 0.2)'
+				const ctx2 = document.getElementById('myChart2').getContext('2d');
+				const myChart2 = new Chart(ctx2, {
+					type: 'bar',
+					data: {
+						labels: ['Pleine Lune','Normale'],
+						datasets: [{
+							label: 'Naissance en période de pleine lune',
+							data: [9, 30],
+							backgroundColor: [
+								'rgba(255, 99, 132, 0.2)',
+								'rgba(54, 162, 235, 0.2)'
 
-						],
-						borderColor: [
-							'rgb(255, 255, 255)'
-						],
-						Color: [
-							'rgb(255,255,255)',
-						],
+							],
+							borderColor: [
+								'rgb(255, 255, 255)'
+							],
+							Color: [
+								'rgb(255,255,255)',
+							],
 
-						borderWidth: 1
-					}]
-				},
-				options: {
-					scales: {
-						y: {
-							beginAtZero: true
+							borderWidth: 1
+						}]
+					},
+					options: {
+						scales: {
+							y: {
+								beginAtZero: true
+							}
 						}
 					}
+				});
+
+				// ---- GRAPHIQUE 2 ---- \\
+
+				function moon(){
+					
+					// début et fin des dates 
+					var start = document.getElementById("start_graph2").value;
+					var stop =document.getElementById("stop_graph2").value;
+
+					//  liste à faire avec les dates de start et de fin
+					var getDaysArray = function(s,e) {for(var a=[],d=new Date(s);d<=new Date(e);d.setDate(d.getDate()+1)){ a.push(new Date(d));}return a;};
+					var date_liste = getDaysArray(new Date(start), new Date (stop));
+
+					// initialise les variables
+					var moon = 0;
+					var not_moon = 0;
+
+					for (let i = 0; i < date_liste.length;i++){
+
+						// transformation des dates en format dictionnaire
+						var month = date_liste[i].getUTCMonth() + 1; 
+						var day = date_liste[i].getUTCDate();
+						var year = date_liste[i].getUTCFullYear();
+						datuum = day + "/" + month + "/" + year;
+
+						// Checking de la date dans le dictionnaire
+						if (datuum in dict_naissances){
+							if( Trig2(year,month,day)==15){ //15 correspond a la pleine lune
+								moon++
+							}else{
+								not_moon++
+							}
+						}
+					}
+
+						// mise à jour des valeurs du graphique (horizontale)
+						myChart2.data.datasets[0].data = [moon,not_moon];
+						myChart2.update();
+
+					// function Trig2 & julday from http://www.ben-daglish.net/moon.shtml 
+					
+					function Trig2(year,month,day) {
+						n = Math.floor(12.37 * (year -1900 + ((1.0 * month - 0.5)/12.0)));
+						RAD = 3.14159265/180.0;
+						t = n / 1236.85;
+						t2 = t * t;
+						as = 359.2242 + 29.105356 * n;
+						am = 306.0253 + 385.816918 * n + 0.010730 * t2;
+						xtra = 0.75933 + 1.53058868 * n + ((1.178e-4) - (1.55e-7) * t) * t2;
+						xtra += (0.1734 - 3.93e-4 * t) * Math.sin(RAD * as) - 0.4068 * Math.sin(RAD * am);
+						i = (xtra > 0.0 ? Math.floor(xtra) :  Math.ceil(xtra - 1.0));
+						j1 = julday(year,month,day);
+						jd = (2415020 + 28 * n) + i;
+						return (j1-jd + 30)%30;
+					}
+
+					function julday(year, month, day) {
+						if (year < 0) { year ++; }
+						var jy = parseInt(year);
+						var jm = parseInt(month) +1;
+						if (month <= 2) {jy--;	jm += 12;	} 
+						var jul = Math.floor(365.25 *jy) + Math.floor(30.6001 * jm) + parseInt(day) + 1720995;
+						if (day+31*(month+12*year) >= (15+31*(10+12*1582))) {
+							ja = Math.floor(0.01 * jy);
+							jul = jul + 2 - ja + Math.floor(0.25 * ja);
+						}
+						return jul;
+					}
+
 				}
-			});
+				
 			</script>
 		</div>
 	</div> 
@@ -416,127 +304,104 @@
 		</div>
 		<canvas  style="padding-bottom: 15px; " id="myChart3" width="400px" height="100px"></canvas>
 			<script>
-			const ctx3 = document.getElementById('myChart3').getContext('2d');
-			const myChart3 = new Chart(ctx3, {
-				type: 'bar',
-				data: {
-					labels: ['Janvier', 'Fevrier', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'aout', 'septembre', 'octobre', 'novembre', 'decembre'],
-					datasets: [{
-						label: 'Naissance',
-						data: [20, 40, 60, 80, 100, 120, 140, 160, 180, 200, 220, 240],
-						backgroundColor: [
-							'rgba(255, 99, 132, 0.2)',
-							'rgba(54, 162, 235, 0.2)',
-							'rgba(255, 206, 86, 0.2)',
-							'rgba(255, 99, 132, 0.2)',
-							'rgba(54, 162, 235, 0.2)',
-							'rgba(255, 206, 86, 0.2)',
-							'rgba(255, 206, 86, 0.2)',
-							'rgba(255, 99, 132, 0.2)',
-							'rgba(54, 162, 235, 0.2)',
-							'rgba(255, 206, 86, 0.2)',
-						],
-						borderColor: [
-							'rgb(255, 255, 255)'
-						],
-						Color: [
-							'rgb(255,255,255)',
-						],
+				const ctx3 = document.getElementById('myChart3').getContext('2d');
+				const myChart3 = new Chart(ctx3, {
+					type: 'bar',
+					data: {
+						labels: ['Janvier', 'Fevrier', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'aout', 'septembre', 'octobre', 'novembre', 'decembre'],
+						datasets: [{
+							label: 'Naissance',
+							data: [],
+							backgroundColor: [
+							],
+							borderColor: [
+								'rgb(255, 255, 255)'
+							],
+							Color: [
+								'rgb(255,255,255)',
+							],
 
-						borderWidth: 1
-					}]
-				},
-				options: {
-					scales: {
-						y: {
-							beginAtZero: true
+							borderWidth: 1
+						}]
+					},
+					options: {
+						scales: {
+							y: {
+								beginAtZero: true
+							}
 						}
 					}
+				});
+
+				// ---- GRAPHIQUE 3 ---- \\
+
+				//recup les valeurs
+				const lst_fam = '{{data.lst_fam |tojson}}';
+				const date_naissances = '{{data.date_naissances |tojson}}';
+				const naissances_jour = '{{data.naissances_jour}}';
+
+				// suppresion des carractères speciaux des requetes 
+				//modifications des valeurs envoyé en elevant les &#39 ou encore la virgule etc
+				var liste_naissances = naissances_jour.replaceAll("&#39;",'').replaceAll("(",'').replaceAll(")",'').replaceAll(",",'').replaceAll("{",'').replaceAll("}",'').replaceAll(":",'').split(" ")
+				// dictionnaire des naissances avec date et le nombre de nouveaux né
+				var dict_naissances = {}
+				for (let i = 0; i < liste_naissances.length; i = i+2){
+					dict_naissances[liste_naissances[i]] = liste_naissances[i+1];
 				}
-			});
 
-			// GRAPHIQUE 3 
-			//recup les valeurs
-			const lst_fam = '{{data.lst_fam |tojson}}';
-			const date_naissances = '{{data.date_naissances |tojson}}';
-			const naissances_jour = '{{data.naissances_jour}}';
+				function data_naissances() {
 
-			// suppresion des brolles de la console
-			//modifications des valeurs envoyé en elevant les &#39 ou encore la virgule etc
-			var liste_naissances = naissances_jour.replaceAll("&#39;",'').replaceAll("(",'').replaceAll(")",'').replaceAll(",",'').replaceAll("{",'').replaceAll("}",'').replaceAll(":",'').split(" ")
-			// dictionnaire des naissances avec date et le nombre de nouveaux né
-			var dict_naissances = {}
-			for (let i = 0; i < liste_naissances.length; i = i+2){
-				dict_naissances[liste_naissances[i]] = liste_naissances[i+1];
-			}
+					//console.log(dict_naissances)
+					// début et fin des dates 
+					var start = document.getElementById("start_graph3").value;
+					var stop =document.getElementById("stop_graph3").value;
+					//console.log(start)
+					//console.log(stop)
 
-			function data_naissances() {
+					//  liste à faire avec les dates de start et de fin
+					var getDaysArray = function(s,e) {for(var a=[],d=new Date(s);d<=new Date(e);d.setDate(d.getDate()+1)){ a.push(new Date(d));}return a;};
+					var date_liste = getDaysArray(new Date(start), new Date (stop));
+					//console.log(date_liste)
 
-				//console.log(dict_naissances)
-				// début et fin des dates 
-				var start = document.getElementById("start_graph3").value;
-				var stop =document.getElementById("stop_graph3").value;
-				console.log(start)
-				console.log(stop)
+					// comparer chaque date de la liste et regarder si elle appartient à la liste
+					var allday = [];
+					var nais = [];
+					for (let i = 0; i < date_liste.length;i++){
 
-				//  liste à faire avec les dates de start et de fin
-				var getDaysArray = function(s,e) {for(var a=[],d=new Date(s);d<=new Date(e);d.setDate(d.getDate()+1)){ a.push(new Date(d));}return a;};
-				var date_liste = getDaysArray(new Date(start), new Date (stop));
-				console.log(date_liste)
+						// transformation des dates en format dictionnaire
+						var month = date_liste[i].getUTCMonth() + 1; 
+						var day = date_liste[i].getUTCDate();
+						var year = date_liste[i].getUTCFullYear();
+						datuum = day + "/" + month + "/" + year;
+						
+						// Checking de la date dans le dictionnaire
+						if (datuum in dict_naissances){
+							nais.push(dict_naissances[datuum])
+							allday.push(datuum)
 
-				// comparer chaque date de la liste et regarder si elle appartient à la liste
-				var allday = [];
-				var nais = [];
-				for (let i = 0; i < date_liste.length;i++){
-
-					// transformation des dates en format dictionnaire
-					var month = date_liste[i].getUTCMonth() + 1; 
-					var day = date_liste[i].getUTCDate();
-					var year = date_liste[i].getUTCFullYear();
-					datuum = day + "/" + month + "/" + year;
-					
-					// Checking de la date dans le dictionnaire
-					if (datuum in dict_naissances){
-						nais.push(dict_naissances[datuum])
-						allday.push(datuum)
-
-					}else{
-						nais.push(0)
-						allday.push(datuum)
+						}else{
+							nais.push(0)
+							allday.push(datuum)
+						}
+						
 					}
+
+					//faire des jolies couleurs
 					
+
+					// mise à jour des valeurs du graphique (horizontale)
+					myChart3.data.labels = allday;
+					myChart3.data.datasets[0].backgroundColor = ['rgba(252, 3, 3,0.5)'];
+					myChart3.data.datasets[0].data = nais;
+					myChart3.update();
 				}
-
-				//faire des jolies couleurs
-				
-
-				// mise à jour des valeurs du graphique (horizontale)
-				myChart3.data.labels = allday;
-				myChart3.data.datasets[0].backgroundColor = ['rgba(252, 3, 3,0.5)'];
-				myChart3.data.datasets[0].data = nais;
-				myChart3.update();
-			}
 			</script>
 		</div>
-	</div> 
+	</div><br>
 
-<br><br>
-
-<!-- Java Script nécésairre pour charger les informations sur les graphiques-->
-<script>
-
-
-
-/// GRAPHIQUE 2
-
-
-//console.log(lst_fam);
-//console.log(date_naissances);
-
-
-</script>
-<!--SPACE BETWEEN TOP NAV AND GRAPH-->
+<!--SPACE BETWEEN GRAPH AND FOOTER-->
 <br><br>  
+
 {% endblock%}    
 
 	

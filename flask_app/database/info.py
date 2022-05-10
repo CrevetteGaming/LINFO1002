@@ -58,7 +58,7 @@ class info:
             return cursor.execute("SELECT type_id, pourcentage FROM animaux_types").fetchall()     
 
 
-# ----- Heritage ----- #
+# ----- Races  ----- #
 
 def recuperation_animaux(self):
     '''  
@@ -158,4 +158,6 @@ def generate_race(conn):
 
         if races[0] == []:
             set_races(conn,id)
+
+
         
