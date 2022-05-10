@@ -1,3 +1,6 @@
+Programme écrit par  Nicolas Swinnen , étudiant de l'EPL, faculté de l'Université Catholique de Louvain.
+Lien • Github : https://github.com/CrevetteGaming/LINFO1002
+
 Inscructions pour le lancement du site:
 
 1. Extraire le ZIP
@@ -5,11 +8,11 @@ Inscructions pour le lancement du site:
 2. Ouvrir un terminal
 
 3. Se rendre dans le répertoire Scripts et lancer le fichier activate.bat pour lancer l'environnement virtuel
-   en utilisant la commande qui suit: cd C:\Users\nicol\Documents\flask_app\env\Scripts\activate.bat
+   en utilisant la commande qui suit: cd \flask_app\env\Scripts\activate.bat
 
-4. Entrer la commande suivante pour lancer le serveur: python __init__.py
+4. Installez Flask à l'aide de la commande suivante: pip install Flask
 
-5. Allez dans un navigateur et aller sur le site: http://127.0.0.1:5000
+5. Entrer la commande suivante pour lancer le serveur: python __init__.py
 
-Petite précision nous avons eu bcp de problèmes avec notre code python ce qui fait que le
-site n'est pas totalement opérationnel malheureusement. Veuillez nous en excuser
+6. Allez dans un navigateur et aller sur le site: http://127.0.0.1:5000
+

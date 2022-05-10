@@ -1,3 +1,6 @@
+# Programme écrit par  Nicolas Swinnen , étudiant de l'EPL, faculté de l'Université Catholique de Louvain.
+# Lien • Github : https://github.com/CrevetteGaming/LINFO1002
+
 import os
 import pathlib
 import sqlite3

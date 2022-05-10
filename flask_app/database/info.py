@@ -1,10 +1,10 @@
-# extraction des données de db pour les utiliser dans les graphs 
-# info https://docs.python.org/3/library/sqlite3.html & https://flaskguide.readthedocs.io/en/latest/flask/flask2.html 
-#      https://www.dbtales.com/convert-a-sql-query-result-to-a-list-in-python-mysql/ 
+# Programme écrit par  Nicolas Swinnen , étudiant de l'EPL, faculté de l'Université Catholique de Louvain.
+# Lien • Github : https://github.com/CrevetteGaming/LINFO1002
 
 import sqlite3
 import os
-import pathlib
+
+# extraction des données de db pour les utiliser dans les graphs 
 
 
 class info:
