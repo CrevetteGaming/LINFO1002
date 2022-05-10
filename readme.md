@@ -9,7 +9,7 @@ Création d'un site internet pour une exploitation laitière et agricole
 #### Installation du projet
 
 ```
-git clone https://github.com/CrevetteGaming/LINFO1002
+git clone https://github.com/CrevetteGaming/LINFO1002_P2_MATTHIEU_08
 cd  LINFO1002
 cd flask_app
 ```
@@ -46,7 +46,7 @@ Introduisez l'url suivant : http://127.0.0.1:5000
 Commencons par cloner le dépo et allons dans le dossier du projet
 
 ```
-git clone https://github.com/CrevetteGaming/LINFO1002
+git clone https://github.com/CrevetteGaming/LINFO1002_P2_MATTHIEU_08
 cd  LINFO1002
 ```
 
