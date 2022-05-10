@@ -3,6 +3,8 @@ Lien • Github : https://github.com/CrevetteGaming/LINFO1002
 
 Inscructions pour le lancement du site:
 
+0. Télecharger le dossier via le lien https://github.com/CrevetteGaming/LINFO1002
+
 1. Extraire le ZIP
 
 2. Ouvrir un terminal
