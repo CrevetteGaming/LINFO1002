@@ -1,5 +1,5 @@
 # Programme écrit par  Nicolas Swinnen , étudiant de l'EPL, faculté de l'Université Catholique de Louvain.
-# Lien • Github : https://github.com/CrevetteGaming/LINFO1002
+# Lien • Github : https://github.com/CrevetteGaming/LINFO1002_P2_MATTHIEU_08
 #
 #création de la base de données             info: https://python.doctor/page-database-data-base-donnees-query-sql-mysql-postgre-sqlite
 

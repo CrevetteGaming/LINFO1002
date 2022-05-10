@@ -1,9 +1,9 @@
 Programme écrit par  Nicolas Swinnen , étudiant de l'EPL, faculté de l'Université Catholique de Louvain.
-Lien • Github : https://github.com/CrevetteGaming/LINFO1002
+Lien • Github : https://github.com/CrevetteGaming/LINFO1002_P2_MATTHIEU_08
 
 Inscructions pour le lancement du site:
 
-0. Télecharger le dossier via le lien https://github.com/CrevetteGaming/LINFO1002
+0. Télecharger le dossier via le lien https://github.com/CrevetteGaming/LINFO1002_P2_MATTHIEU_08
 
 1. Extraire le ZIP
 

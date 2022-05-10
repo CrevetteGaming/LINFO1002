@@ -1,5 +1,5 @@
 # Code écrit par  Nicolas Swinnen , étudiant de l'EPL, faculté de l'Université Catholique de Louvain.
-# Lien • Github : https://github.com/CrevetteGaming/LINFO1002
+# Lien • Github : https://github.com/CrevetteGaming/LINFO1002_P2_MATTHIEU_08
 
 # /!\ ne pas suprrimer car une partie de la config de flask repose dessus
 import os
@@ -40,10 +40,7 @@ data = {
     "date_naissances" : naissances,
     "naissances_jour" : naissances_jour,
     "race_pourc" : race_pourc
-
 }
-
-
 
 # home page
 @app.route('/')  # root : main page
