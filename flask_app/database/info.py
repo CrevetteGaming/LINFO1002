@@ -8,23 +8,26 @@ import os
 
 
 class info:
+    '''
+    Class qui extrait les données de la base de données pour les utiliser et former les graphiques
+    '''
 
     def __init__(self,db):
         '''
-        initialisation des attributs de l'objet
+        Initialisation des attributs de l'objet
         '''
         self.data_name = db
 
     def connection(self):
         '''
-        Connection à la base de donnée
+        Création de la connection à la base de donnée
         '''
         self.conn = sqlite3.connect(self.data_name)
 
 
     def deconnection(self):
         '''
-        deconnection de la base de donnée
+        Cloture la connection à la base de données
         '''
         self.conn.close()
 
@@ -107,7 +110,7 @@ def races_calculs(races_parents):
 
 def liaisons_races(conn, animal_id, race):
     '''
-    liste des races et leur pourcentage ajouter à la base de données
+    Liste des races et leur pourcentage ajouter à la base de données
     '''
     for r in race:
         with conn as cursor:
