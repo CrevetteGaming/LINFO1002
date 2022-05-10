@@ -73,7 +73,7 @@ Introduisez l'url suivant : http://127.0.0.1:5000
 
 ## En cas d'erreur
 
-En cas d'erreur lors du lancement du site n'hésitez pas à nous contacter via nos 2 adresses mail : dylan.mainghain@uclouvain.be ou bien nicolas.swinnen@uclouvain.be 
+En cas d'erreur lors du lancement du site n'hésitez pas à nous contacter via nos 2 adresses mail : nicolas.swinnen@student.uclouvain.be 
 
 Vous avez dans le répertoire racine du site un fichier explication-screen.pdf qui permet de visualiser le site à l'aide de screenshots et d'explications.
 
@@ -121,6 +121,7 @@ LINFO1002-P2
 
 ```
 
-## Auteur
+## Auteurs
 
+- Mainghain Dylan
 - Swinnen Nicolas
