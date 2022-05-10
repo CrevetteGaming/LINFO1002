@@ -78,6 +78,48 @@ En cas d'erreur lors du lancement du site n'hésitez pas à nous contacter via n
 Vous avez dans le répertoire racine du site un fichier explication-screen.pdf qui permet de visualiser le site à l'aide de screenshots et d'explications.
 
 ## Arborecense des fichiers
+```
+LINFO1002-P2
+├── README.md
+├── LICENCE
+├── flask_app // Dossier contenant tout le projet
+│   ├── database // Fichiers liés à la base de données
+│   │   ├── 1002-sql-data // Dossier contenant les fichiers d'insertions, les données
+│   │   │   |   ├── insert_animaux.sql
+│   │   │   |   ├── insert_animaux_types.sql
+│   │   │   |   ├── insert_animaux_velages.sql
+│   │   │   |   ├── insert_complications.sql
+│   │   │   |   ├── insert_familles.sql
+│   │   │   |   ├── insert_types.sql
+│   │   │   |   ├── insert_velages.sql
+│   │   │   |   └── insert_velages_complications.sql
+│   │   ├── create_db.py // Fichier pour initialiser la base de données, générer les différentes races
+│   │   ├── inginious.sql // Script SQL qui crée la base de données
+│   │   ├── database.sqlite base de données 
+│   │   ├── info // Fichiers contenant les fonctions utiles pour créer les différents graphiques
+│   ├── static // Tout les fichiers static du site
+│   │   │   └── css 
+│   │   │   |   └── style.css // Styles pour le site Web
+│   │   │   └── images
+│   │   │   |   ├── farm-logo-3.ico
+│   │   │   |   ├── farm-logo-2.png
+│   │   │   |   ├── troischenes1.jpg
+│   │   │   |   ├── troischenes1.jpg
+│   │   │   |   ├── troischenes2.jpg
+│   │   │   |   └── troischenes3.jpg
+│   ├── templates
+│   |   ├── bases.html
+│   |   ├── index.html
+│   |   ├── about.html
+│   |   └── contact.html
+|   ├── tests
+│   |   └── test.py
+│   ├── Explication-Screen.pdf
+│   │── __init__.py // Fichier principal, le fichier à exécuter pour lancer les sites
+│   ├── app.py 
+|   ├── readme.txt
+
+```
 
 ## Auteurs
 
